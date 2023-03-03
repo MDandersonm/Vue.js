@@ -44,7 +44,11 @@ export default {
     methods: {
         onSubmit () {
             const { title, writer, content } = this
+
+            //emit은 하위컴퍼넌트의 동작으로 상위컴퍼넌트의 메서드를 실행시킴
             this.$emit('submit', { title, writer, content })
+                      //@submit이벤트명  
+                      //-> { title, writer, content }가 함수매개변수로감
         }
     }
 }
